@@ -10,11 +10,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class BaseClass {
@@ -25,22 +23,9 @@ public class BaseClass {
 
 	public WebDriver initDriver() throws IOException, FileNotFoundException, ClassNotFoundException, SQLException {
 
-		// fetching test parameters from DB
-		//System.out.println("call made to fetch test parameters from DB");
-		//SqlDbConnect.getDb();
 
-		Properties prop = new Properties();
-
-		FileInputStream FIS = new FileInputStream(
-				"C:\\Users\\bilal\\Desktop\\automation\\ixaris\\src\\main\\java\\properties\\output.properties");
-
-		prop.load(FIS);
-
-		// fetching browser and url from Map
-		// Get a set of the entries
-
-		String browser = prop.getProperty("Browser_Name");
-		String url = prop.getProperty("url");
+		String browser = "chrome";
+		String url = "https://indigo-testing.shireburn.com/";
 		if (browser.equals("chrome")) {
 			// System.out.println("Test initiated using chrome browser");
 			log.info("Test initiated using chrome browser");
