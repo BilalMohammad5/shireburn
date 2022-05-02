@@ -11,3 +11,13 @@ Step definition is written using JAVA
 To execute the test run the cucumber.xml file located in the root directory.
 
 Once the execution complete interactable reports are generated and stored under: main/reports/result.html
+
+
+
+Install Chrome driver  chromedriver_win32.zip, extract the .exe file and run. Once you run successfully. 
+Note the location of the driver, this location needs to be provided in the automation suite
+clone the test automation project file and open it using any IDE. (Preferably Intellij)
+go to the root folder -  current workspace\src\main\java\Zerodha\BaseClass.java
+in the  BaseClass.java go to line number 32 and update  driver location as per the current workspace
+System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver.exe"); -this driver location needs to be updated.
+then run the cucumber.xml located in the root folder
