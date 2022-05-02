@@ -45,6 +45,7 @@ public class launch extends BaseClass {
     @When("user should be able to see the website title")
     public void user_should_be_able_to_see_the_website_title() {
 
+
         try {
             WebDriverWait wait = new WebDriverWait(driver, 5); //Explicit wait
             wait.until(ExpectedConditions.titleIs(expectedTitle));
